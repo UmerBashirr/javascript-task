@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+        <script>
+
+            //largest number in array
+let arr = [5, 2, 67, 37, 420, 6969, 10];
+temp = 0;
+
+arr.forEach((element) => {
+  if (temp < element) {
+    temp = element;
+  }
+});
+
+console.log(`The largest number in the array: ${temp}`);
+
+///////////////////////////////////////////////////////////////////////////////////
+
+//multiplication of array
+    const arr1 = [1,2,3,4];
+    const multiply = arr1.reduce((prevValue,curValue) => {
+        return prevValue * curValue
+    });
+    console.log(`Multiplication of the array: ${multiply}`);
+///////////////////////////////////////////////////////////////////////////////////
+
+//Vowel Count
+function vowel_counting(string)
+{
+  var vowel = 'aeiouAEIO';
+  var vcount = 0;
+  
+  for(var i = 0; i < string.length ; i++)
+  {
+    if (vowel.indexOf(string[i]) !== -1)
+    {
+      vcount += 1;
+    }
+  
+  }
+  return vcount;
+}
+console.log(vowel_counting("I am Not a Terrorist"));
+/////////////////////////////////////////////////////////////////////////////////
+
+
+
+// find the most frequent/ most repeatable item of an array
+const arrr = ['a', 'a', 3, 4, 'a', 'a', 3, 'a',3,'a'];
+let count=0;
+let count1=1;
+let count2;
+
+for (let i=0; i<arrr.length; i++)
+{
+    for (let j=0; j<arrr.length; j++)
+    {
+            if (arrr[i]==arrr[j])
+            {
+                count++;
+            }
+
+            if (count1 < count)
+    {
+        count1=count;
+        count2=arrr[i];
+    }
+
+    }
+
+    count = 0;
+}
+
+console.log(count2);
+        </script>
+</body>
+</html>
